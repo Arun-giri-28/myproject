@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class WatchController1 {
 @GetMapping(value="/getWatch1")
-public List<Watch1> getWatch1(@RequestBody List<Watch1> w){
+public ArrayList<Watch1> getWatch1(@RequestBody List<Watch1> w){
 	//stream method
      //return w.stream().filter(x->x.getprice()>1500).collect(Collectors.toList());
 	
@@ -23,7 +23,9 @@ public List<Watch1> getWatch1(@RequestBody List<Watch1> w){
 		x.add(w.get(i));
 	}
 	}
+	System.out.println(x);
 	return x;
+	
 }
 	//Q2
 	@GetMapping(value="/getmax")
